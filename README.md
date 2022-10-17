@@ -22,7 +22,9 @@ Prediction of a housing price given a set of features that describe a house in B
 #### Bivariate Analysis
 ##### Correlation matrix based on heatmap:
 <img width="689" alt="Screen Shot 2022-10-17 at 5 34 23 AM" src="https://user-images.githubusercontent.com/110929917/196143607-d4319e9e-9ea3-4f10-84b0-972138b5bb22.png">
-<img width="941" alt="Screen Shot 2022-10-17 at 5 34 42 AM" src="https://user-images.githubusercontent.com/110929917/196143633-7c238ff5-ee21-4122-9cbb-b44918d22be2.png">
+<img width="941" alt="Screen Shot 2022-10-17 at 9 41 48 AM" src="https://user-images.githubusercontent.com/110929917/196192770-60744fad-99eb-43c0-b835-f81f812c740f.png">
+<img width="961" alt="Screen Shot 2022-10-17 at 9 41 59 AM" src="https://user-images.githubusercontent.com/110929917/196192810-e385559f-82be-4bc5-8316-fa45dfbe3312.png">
+
 
 ##### Could any of the strong/weak correlations be due to outliers?
 <img width="944" alt="Screen Shot 2022-10-17 at 5 35 51 AM" src="https://user-images.githubusercontent.com/110929917/196144267-b7ff1ad9-96f0-42e3-ba9b-cb4c7e965a49.png">
@@ -39,5 +41,48 @@ Prediction of a housing price given a set of features that describe a house in B
 
 ### Regression Model:
 
+<img width="444" alt="Screen Shot 2022-10-17 at 9 37 27 AM" src="https://user-images.githubusercontent.com/110929917/196191828-b4aed262-f988-4162-bf94-de9494e1a16a.png">
+
+<img width="907" alt="Screen Shot 2022-10-17 at 9 38 16 AM" src="https://user-images.githubusercontent.com/110929917/196191863-1853d418-e6c8-4e28-b7ea-423e80658af6.png">
+<img width="907" alt="Screen Shot 2022-10-17 at 9 38 24 AM" src="https://user-images.githubusercontent.com/110929917/196191884-d86410b7-d099-4dbf-bcfe-98252b7c81fc.png">
+<img width="795" alt="Screen Shot 2022-10-17 at 9 38 40 AM" src="https://user-images.githubusercontent.com/110929917/196191901-d19013bd-6928-4cf3-b063-8689f0b1057f.png">
+
+### Modelling after removing multicollinearity:
+<img width="923" alt="Screen Shot 2022-10-17 at 9 45 03 AM" src="https://user-images.githubusercontent.com/110929917/196193967-e4858fb1-623f-49d7-8254-b618cb20b17c.png">
+
+### Dropping features with P(t) > 0.05:
+<img width="923" alt="Screen Shot 2022-10-17 at 9 45 28 AM" src="https://user-images.githubusercontent.com/110929917/196193991-36b1de12-7089-4c5a-9e90-e903af46e47d.png">
+
+### Checking for the assumptions and rebuilding the model:
+<img width="903" alt="Screen Shot 2022-10-17 at 9 45 52 AM" src="https://user-images.githubusercontent.com/110929917/196194072-b99ab79b-e6ad-49fe-bc39-41182dfbe844.png">
+<img width="900" alt="Screen Shot 2022-10-17 at 9 46 12 AM" src="https://user-images.githubusercontent.com/110929917/196194084-fc500c51-db82-4678-99cf-9e3b65430c9b.png">
+<img width="949" alt="Screen Shot 2022-10-17 at 9 46 22 AM" src="https://user-images.githubusercontent.com/110929917/196194096-e9652b9c-f53f-486c-bc77-394de8a6d8cb.png">
+<img width="942" alt="Screen Shot 2022-10-17 at 9 46 36 AM" src="https://user-images.githubusercontent.com/110929917/196194112-188215ce-1bb6-4661-8bc2-0d72c500c785.png">
+<img width="967" alt="Screen Shot 2022-10-17 at 9 46 45 AM" src="https://user-images.githubusercontent.com/110929917/196194138-194a5ad3-9c7b-4b37-8aa3-1c3a44914af6.png">
+<img width="944" alt="Screen Shot 2022-10-17 at 9 46 53 AM" src="https://user-images.githubusercontent.com/110929917/196194147-c5e3209a-7b1c-4af2-9288-8dcf2f52c42f.png">
+
+### Taking log of the target variable:
+<img width="935" alt="Screen Shot 2022-10-17 at 9 49 04 AM" src="https://user-images.githubusercontent.com/110929917/196194440-08b67343-49db-431e-a64a-07dddeaeb321.png">
+
+#### Checking for the assumptions for our model:
+
+- Mean of residuals: -1.549921521948453e-15
+- Tests for Normality:
+<img width="598" alt="Screen Shot 2022-10-17 at 9 50 06 AM" src="https://user-images.githubusercontent.com/110929917/196195630-a5e7930e-64bd-442a-a197-4e911561a9cb.png">
+
+- Linearity of Variables:
+<img width="595" alt="Screen Shot 2022-10-17 at 9 50 36 AM" src="https://user-images.githubusercontent.com/110929917/196195805-b2d225fb-8968-423c-88d9-0a14160b81c6.png">
+
+- Heteroscedasticity:
+<img width="948" alt="Screen Shot 2022-10-17 at 9 50 48 AM" src="https://user-images.githubusercontent.com/110929917/196195857-7bdcc353-4abc-48af-93d5-9afa0d777c3f.png">
+
+<img width="944" alt="Screen Shot 2022-10-17 at 9 51 13 AM" src="https://user-images.githubusercontent.com/110929917/196195923-4d346645-3db1-4754-b900-0a56045f8114.png">
+
+
+### Check the performance of the model on the train and test data set
+
+<img width="571" alt="Screen Shot 2022-10-17 at 9 51 38 AM" src="https://user-images.githubusercontent.com/110929917/196195961-8677ced3-8fc8-49d4-a4f0-90713791085e.png">
+
+<img width="949" alt="Screen Shot 2022-10-17 at 9 52 00 AM" src="https://user-images.githubusercontent.com/110929917/196195985-227a0a0f-62f7-433e-920f-8d0312d6df4d.png">
 
 
